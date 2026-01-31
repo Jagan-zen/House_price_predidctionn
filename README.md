@@ -54,6 +54,17 @@ The model predicts **log(price)**, which is converted back to the actual price u
 
 ---
 
+## 📸 Screenshots
+welcome page
+<img width="1920" height="965" alt="Welcome page" src="https://github.com/user-attachments/assets/d5f1acec-582b-49fd-a809-ab6951c7d11f" />
+detail filling page
+<img width="1920" height="965" alt="filling page" src="https://github.com/user-attachments/assets/5125c40a-5da3-477a-875f-9a5326662190" />
+prediction page
+<img width="1918" height="969" alt="Prediction page" src="https://github.com/user-attachments/assets/0ff55905-b4b2-458e-a76c-fe193e02f978" />
+
+
+
+
 ## 🖥️ How to Run Locally
 
 ```bash
@@ -61,6 +72,12 @@ git clone https://github.com/your-username/house-price-prediction.git
 cd house-price-prediction
 pip install -r requirements.txt
 python app.py
+
+---
+
+## 📸Scree shots
+
+
 
 
 
