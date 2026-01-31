@@ -1,0 +1,123 @@
+{% include 'header.html' %}
+<body>
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-4">
+                <div class="card-body">
+                    <h2 class="title">Melbourne House Price Prediction</h2>
+                    <form method="POST" action="{{ url_for('predict') }}" >
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">No. of Rooms</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="rooms">
+                                    <option disabled="disabled" selected="selected">Choose option</option>
+                                    {% for i in range(15) %}
+                                        <option>{{ i }}</option>
+                                    {% endfor %}
+                                    </select>
+                                    <div class="select-dropdown"></div>
+                                    </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group">
+                                            <label class="label">No. of Bathrooms</label>
+                                            <div class="rs-select2 js-select-simple select--no-search">
+                                                <label>
+                                                    <select name="bathrooms">
+                                                        <option disabled="disabled" selected="selected">Choose option</option>
+                                                        {% for i in range(15) %}
+                                                            <option>{{ i }}</option>
+                                                        {% endfor %}
+                                                    </select>
+                                                </label>
+                                                <div class="select-dropdown"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group">
+                                            <label class="label">Sub Urban Area</label>
+                                            <div class="rs-select2 js-select-simple select--no-search">
+                                                <select name="suburb">
+                                                <option disabled="disabled" selected="selected" >Choose option</option>
+                                                    {% for i in suburbs %}
+                                                        <option>{{ i }}</option>
+                                                    {% endfor %}
+                                                </select>
+                                        <div class="select-dropdown"></div>
+                                        </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="input-group">
+                                            <label class="label">Type of House</label>
+                                            <div class="p-t-10">
+                                                <label class="radio-container m-r-45">House
+                                                    <input type="radio" name="type" value="h" id="1">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <label class="radio-container m-r-45">
+                                                    <input type="radio" name="type" value="u" id="2">unit
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                                <label class="radio-container m-r-45">Townhouse
+                                                    <input type="radio" name="type" value="t" id="3">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-space">
+                                    <div class="col-3">
+                                        <div class="input-group">
+                                            <label class="label">Year Built</label>
+                                            <div class="rs-select2 js-select-simple select--no-search">
+                                                <select name="year">
+                                                <option disabled="disabled" selected="selected">Choose option</option>
+                                                    {% for i in range(year,1799,-1) %}
+                                                        <option>{{ i }}</option>
+                                                    {% endfor %}
+                                                </select>
+                                            <div class="select-dropdown"></div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <label class="label">Land Size(in sq.m)</label>
+                                    <input class="input--style-4" type="number" name="landsize">
+
+                                </div>
+
+                                <div class="input-group">
+                                    <label class="label">Building Area(in sq.m)</label>
+                                    <input class="input--style-4" type="number" name="area">
+
+                                </div>
+
+                                <div class="input-group">
+                                    <label class="label">Distance from CBD(in KM)</label>
+                                    <input class="input--style-4" type="number" name="distance" >
+                                </div>
+
+                                <div class="col-4">
+                                    <div class="p-t-15">
+                                        <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
+                                    </div>
+                                </div>
+
+                        </div>
+                    </form>
+                </div>
+                </div>
+            </div>
+        </div>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+{% include 'footer.html' %}
+<!-- end document-->
