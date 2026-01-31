@@ -37,4 +37,31 @@ It includes data preprocessing, model training, log-transformed target regressio
 ---
 
 ## 📊 Features Used
+- Rooms
+- Bathroom
+- BuildingArea-
+- Type-
+- YearBuilt
+- Suburb
+- Distance
+- Landsize
+
+
+---
+
+## 📈 Model Output
+The model predicts **log(price)**, which is converted back to the actual price using exponential transformation.
+
+---
+
+## 🖥️ How to Run Locally
+
+```bash
+git clone https://github.com/your-username/house-price-prediction.git
+cd house-price-prediction
+pip install -r requirements.txt
+python app.py
+
+
+
 
